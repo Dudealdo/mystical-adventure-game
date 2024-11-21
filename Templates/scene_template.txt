@@ -1,8 +1,6 @@
-cat <<EOF > $GAME_DIR/Templates/scene_names.txt
-Starting_Island
-Mystic_Forest
-Sacred_Cave
-Celestial_Plains
-Time_Vortex
-EOF
+# Scene Template for Mystical Adventure Game
+# Use this template to create a new scene.
 
+Scene Name: [Enter Scene Name]
+Environment Type: [Specify Environment]
+Key Elements: [List Key Game Elements]
