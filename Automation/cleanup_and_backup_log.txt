@@ -50,3 +50,15 @@ total size is 48,606  speedup is 10.74
 2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
 2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
 2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
+sending incremental file list
+sending incremental file list
+sending incremental file list
+sending incremental file list
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
+sending incremental file list

@@ -17,3 +17,16 @@
 2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting image generation.
 2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting image generation.
 2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting image generation.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting image generation.
+convert-im6.q16: unable to open image `/path/to/input.png': No such file or directory @ error/blob.c/OpenBlob/2964.
+convert-im6.q16: no images defined `/home/dude/mystical_adventure_game/Assets/GeneratedImages/output.png' @ error/convert.c/ConvertImageCommand/3234.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting image generation.
+convert-im6.q16: unable to open image `/path/to/input.png': No such file or directory @ error/blob.c/OpenBlob/2964.
+convert-im6.q16: no images defined `/home/dude/mystical_adventure_game/Assets/GeneratedImages/output.png' @ error/convert.c/ConvertImageCommand/3234.
+convert-im6.q16: unable to open image `/path/to/input.png': No such file or directory @ error/blob.c/OpenBlob/2964.
+convert-im6.q16: no images defined `/home/dude/mystical_adventure_game/Assets/GeneratedImages/output.png' @ error/convert.c/ConvertImageCommand/3234.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Image generation completed.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting image generation.
+convert-im6.q16: unable to open image `/path/to/input.png': No such file or directory @ error/blob.c/OpenBlob/2964.
+convert-im6.q16: no images defined `/home/dude/mystical_adventure_game/Assets/GeneratedImages/output.png' @ error/convert.c/ConvertImageCommand/3234.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Image generation completed.
