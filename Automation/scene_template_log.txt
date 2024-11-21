@@ -1,3 +1,27 @@
 2024年 11月 21日 木曜日 02:45:59 MST : [INFO] Created BasicExploration Scene (BasicExploration_20241121_024559.unity).
 2024年 11月 21日 木曜日 02:45:59 MST : [INFO] Created EncounterZone Scene (EncounterZone_20241121_024559.unity).
 2024年 11月 21日 木曜日 02:45:59 MST : [INFO] Created PuzzleRoom Scene (PuzzleRoom_20241121_024559.unity).
+2024年 11月 21日 木曜日 11:10:31 MST : [INFO] Created BasicExploration Scene (BasicExploration_20241121_111031.unity).
+2024年 11月 21日 木曜日 11:10:31 MST : [INFO] Created EncounterZone Scene (EncounterZone_20241121_111031.unity).
+2024年 11月 21日 木曜日 11:10:31 MST : [INFO] Created PuzzleRoom Scene (PuzzleRoom_20241121_111031.unity).
+2024年 11月 21日 木曜日 11:12:01 MST : [ERROR] Template file for BasicExploration not found (/home/dude/mystical_adventure_game/Templates/BasicExplorationScene.unity).
+2024年 11月 21日 木曜日 11:12:01 MST : [ERROR] Template file for EncounterZone not found (/home/dude/mystical_adventure_game/Templates/EncounterZoneTemplate.unity).
+2024年 11月 21日 木曜日 11:12:01 MST : [ERROR] Template file for PuzzleRoom not found (/home/dude/mystical_adventure_game/Templates/PuzzleRoomTemplate.unity).
+2024年 11月 21日 木曜日 11:22:06 MST : [INFO] Created BasicExploration Scene (BasicExploration_20241121_112206.unity).
+2024年 11月 21日 木曜日 11:22:06 MST : [INFO] Created EncounterZone Scene (EncounterZone_20241121_112206.unity).
+2024年 11月 21日 木曜日 11:22:06 MST : [INFO] Created PuzzleRoom Scene (PuzzleRoom_20241121_112206.unity).
+2024年 11月 21日 木曜日 11:25:07 MST : [INFO] Created BasicExploration Scene (BasicExploration_20241121_112507.unity).
+2024年 11月 21日 木曜日 11:25:07 MST : [INFO] Created EncounterZone Scene (EncounterZone_20241121_112507.unity).
+2024年 11月 21日 木曜日 11:25:07 MST : [INFO] Created PuzzleRoom Scene (PuzzleRoom_20241121_112507.unity).
+2024年 11月 21日 木曜日 11:26:01 MST : [INFO] Created BasicExploration Scene (BasicExploration_20241121_112601.unity).
+2024年 11月 21日 木曜日 11:26:01 MST : [INFO] Created EncounterZone Scene (EncounterZone_20241121_112601.unity).
+2024年 11月 21日 木曜日 11:26:01 MST : [INFO] Created PuzzleRoom Scene (PuzzleRoom_20241121_112601.unity).
+2024年 11月 21日 木曜日 11:26:43 MST : [INFO] Created BasicExploration Scene (BasicExploration_20241121_112643.unity).
+2024年 11月 21日 木曜日 11:26:43 MST : [INFO] Created EncounterZone Scene (EncounterZone_20241121_112643.unity).
+2024年 11月 21日 木曜日 11:26:43 MST : [INFO] Created PuzzleRoom Scene (PuzzleRoom_20241121_112643.unity).
+2024年 11月 21日 木曜日 11:27:49 MST : [INFO] Created BasicExploration Scene (BasicExploration_20241121_112749.unity).
+2024年 11月 21日 木曜日 11:27:49 MST : [INFO] Created EncounterZone Scene (EncounterZone_20241121_112749.unity).
+2024年 11月 21日 木曜日 11:27:49 MST : [INFO] Created PuzzleRoom Scene (PuzzleRoom_20241121_112749.unity).
+2024年 11月 21日 木曜日 11:28:59 MST : [INFO] Created BasicExploration Scene (BasicExploration_20241121_112859.unity).
+2024年 11月 21日 木曜日 11:28:59 MST : [INFO] Created EncounterZone Scene (EncounterZone_20241121_112859.unity).
+2024年 11月 21日 木曜日 11:28:59 MST : [INFO] Created PuzzleRoom Scene (PuzzleRoom_20241121_112859.unity).
