@@ -102,3 +102,8 @@
 2024年 11月 21日 木曜日 12:25:57 MST : [INFO] Creating scene template EncounterZoneScene.
 2024年 11月 21日 木曜日 12:25:57 MST : [INFO] Scene EncounterZoneScene recycled.
 2024年 11月 21日 木曜日 12:25:57 MST : [INFO] Scene recycling process completed successfully.
+2024年 11月 21日 木曜日 12:59:24 MST : [INFO] Starting scene recycling process.
+2024年 11月 21日 木曜日 12:59:24 MST : [INFO] Moved /home/dude/mystical_adventure_game/Scenes/BasicExplorationScene_20241121_122557.unity to archive.
+2024年 11月 21日 木曜日 12:59:24 MST : [INFO] Moved /home/dude/mystical_adventure_game/Scenes/EncounterZoneScene_20241121_122557.unity to archive.
+2024年 11月 21日 木曜日 12:59:24 MST : [INFO] Moved /home/dude/mystical_adventure_game/Scenes/PuzzleRoomScene_20241121_122557.unity to archive.
+2024年 11月 21日 木曜日 12:59:24 MST : [INFO] Scene recycling process completed.
