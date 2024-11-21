@@ -56,3 +56,15 @@ convert-im6.q16: no images defined `/home/dude/mystical_adventure_game/Assets/Ge
 2024年 11月 21日 木曜日 00:25:22 MST : [ERROR] Image generation failed.
 2024年 11月 21日 木曜日 00:27:13 MST : [INFO] Starting image generation.
 2024年 11月 21日 木曜日 00:27:13 MST : [ERROR] Image generation failed.
+2024年 11月 21日 木曜日 00:30:04 MST : [INFO] Starting image generation.
+2024年 11月 21日 木曜日 00:30:04 MST : [INFO] Image generation completed.
+2024年 11月 21日 木曜日 00:30:29 MST : [INFO] Starting image generation.
+2024年 11月 21日 木曜日 00:30:29 MST : [INFO] Image generation completed.
+2024年 11月 21日 木曜日 00:31:14 MST : [INFO] Starting image generation.
+2024年 11月 21日 木曜日 00:31:14 MST : [INFO] Image generation completed.
+2024年 11月 21日 木曜日 00:34:29 MST : [INFO] Starting image generation.
+2024年 11月 21日 木曜日 00:34:29 MST : [INFO] Image generation completed.
+2024年 11月 21日 木曜日 00:40:06 MST : [INFO] Starting image generation.
+2024年 11月 21日 木曜日 00:40:06 MST : [INFO] Image generation completed.
+2024年 11月 21日 木曜日 00:41:06 MST : [INFO] Starting image generation.
+2024年 11月 21日 木曜日 00:41:06 MST : [INFO] Image generation completed.

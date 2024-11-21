@@ -1,0 +1,2 @@
+2024年 11月 21日 木曜日 00:45:49 MST : [INFO] Proximity-based trigger proximity_test activated at distance 5.
+2024年 11月 21日 木曜日 00:47:32 MST : [INFO] Proximity-based trigger proximity_test activated at distance 5.

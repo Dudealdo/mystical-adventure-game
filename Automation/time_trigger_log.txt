@@ -1,0 +1,2 @@
+2024年 11月 21日 木曜日 00:44:23 MST : [INFO] Waiting for 10 seconds to activate example_trigger.
+2024年 11月 21日 木曜日 00:44:33 MST : [INFO] Time-based trigger example_trigger activated.

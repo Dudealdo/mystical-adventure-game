@@ -333,3 +333,16 @@ total size is 62,812  speedup is 2.44
 
 sent 26,582 bytes  received 377 bytes  17,972.67 bytes/sec
 total size is 63,964  speedup is 2.37
+2024年 11月 21日 木曜日 00:42:42 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:42:42 MST : [INFO] Cleanup completed.
+sending incremental file list
+./
+Assets/image_generation_log.txt
+Assets/test_image.png
+Assets/GeneratedImages/output.png
+Automation/
+Automation/cleanup_and_backup_log.txt
+Automation/image_builder.sh
+
+sent 20,699 bytes  received 132 bytes  41,662.00 bytes/sec
+total size is 62,791  speedup is 3.01
