@@ -1,0 +1,6 @@
+# Scene Template for Mystical Adventure Game
+# Use this template to create a new scene.
+
+Scene Name: [Enter Scene Name]
+Environment Type: [Specify Environment]
+Key Elements: [List Key Game Elements]

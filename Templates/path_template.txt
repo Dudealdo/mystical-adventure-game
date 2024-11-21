@@ -1,0 +1,6 @@
+# Path Template for Mystical Adventure Game
+# Use this template to define a new path.
+
+Path Name: [Enter Path Name]
+Description: [Describe the path]
+Possible Choices: [List Choices]

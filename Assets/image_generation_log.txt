@@ -1,0 +1,12 @@
+2024年 11月 20日 水曜日 18:58:33 MST : [INFO] Starting image generation.
+2024年 11月 20日 水曜日 18:58:33 MST : [INFO] Image generation completed.
+2024年 11月 20日 水曜日 19:20:51 MST : [INFO] Starting image generation.
+2024年 11月 20日 水曜日 19:20:51 MST : [INFO] Image generation completed.
+2024年 11月 20日 水曜日 19:23:31 MST : [INFO] Starting image generation for '/home/dude/mystical_adventure_game/Assets/test_image.png'.
+2024年 11月 20日 水曜日 19:23:31 MST : [INFO] Image generation completed successfully for '/home/dude/mystical_adventure_game/Assets/test_image.png'. Output: '/home/dude/mystical_adventure_game/Assets/GeneratedImages/output.png'
+2024年 11月 20日 水曜日 20:42:58 MST : [INFO] Starting image generation.
+2024年 11月 20日 水曜日 20:42:58 MST : [INFO] Image generation completed.
+2024年 11月 20日 水曜日 20:45:04 MST : [INFO] Starting image generation.
+2024年 11月 20日 水曜日 20:45:04 MST : [INFO] Image generation completed.
+2024年 11月 20日 水曜日 21:37:03 MST : [INFO] Starting image generation.
+2024年 11月 20日 水曜日 21:37:03 MST : [INFO] Image generation completed.

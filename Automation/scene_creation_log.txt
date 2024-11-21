@@ -1,0 +1,4 @@
+2024年 11月 20日 水曜日 18:58:22 MST : [INFO] Creating new scene: test_scene
+2024年 11月 20日 水曜日 20:42:31 MST : [INFO] Creating new scene: TestScene
+2024年 11月 20日 水曜日 20:44:33 MST : [INFO] Creating new scene: NewTestScene
+2024年 11月 20日 水曜日 21:36:44 MST : [INFO] Creating new scene: Starting_Island

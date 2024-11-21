@@ -1,0 +1,8 @@
+cat <<EOF > $GAME_DIR/Templates/scene_names.txt
+Starting_Island
+Mystic_Forest
+Sacred_Cave
+Celestial_Plains
+Time_Vortex
+EOF
+

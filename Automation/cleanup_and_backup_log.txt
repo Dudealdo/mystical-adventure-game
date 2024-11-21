@@ -1,0 +1,37 @@
+2024年 11月 20日 水曜日 20:43:32 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 20日 水曜日 20:43:32 MST : [INFO] Cleanup completed.
+sending incremental file list
+./
+mint_os_setup_log.txt
+Assets/
+Assets/image_generation_log.txt
+Assets/test_image.png
+Assets/GeneratedImages/
+Assets/GeneratedImages/output.png
+Automation/
+Automation/.image_builder.sh.swp
+Automation/cleanup_and_backup_log.txt
+Automation/image_builder.sh
+Automation/scene_creation_log.txt
+Automation/scene_creator.sh
+Scenes/
+Scenes/TestScene.unity
+Scenes/test_scene.unity
+Scripts/automate_cleanup_and_backup.sh
+Tools/
+
+sent 19,041 bytes  received 280 bytes  12,880.67 bytes/sec
+total size is 47,655  speedup is 2.47
+2024年 11月 20日 水曜日 20:45:19 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 20日 水曜日 20:45:19 MST : [INFO] Cleanup completed.
+sending incremental file list
+Assets/image_generation_log.txt
+Assets/test_image.png
+Assets/GeneratedImages/output.png
+Automation/cleanup_and_backup_log.txt
+Automation/scene_creation_log.txt
+Scenes/
+Scenes/NewTestScene.unity
+
+sent 4,382 bytes  received 143 bytes  9,050.00 bytes/sec
+total size is 48,606  speedup is 10.74
