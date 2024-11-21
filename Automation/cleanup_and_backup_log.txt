@@ -35,3 +35,18 @@ Scenes/NewTestScene.unity
 
 sent 4,382 bytes  received 143 bytes  9,050.00 bytes/sec
 total size is 48,606  speedup is 10.74
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
+2024年 11月 21日 木曜日 00:00:01 MST : [INFO] Cleanup completed.
