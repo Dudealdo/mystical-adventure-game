@@ -3,3 +3,4 @@
 2024年 11月 20日 水曜日 20:44:33 MST : [INFO] Creating new scene: NewTestScene
 2024年 11月 20日 水曜日 21:36:44 MST : [INFO] Creating new scene: Starting_Island
 2024年 11月 20日 水曜日 23:58:53 MST : [INFO] Creating new scene: NewScene
+2024年 11月 21日 木曜日 00:51:39 MST : [INFO] Creating new scene: new_scene
