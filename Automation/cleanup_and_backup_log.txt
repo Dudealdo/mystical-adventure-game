@@ -346,3 +346,16 @@ Automation/image_builder.sh
 
 sent 20,699 bytes  received 132 bytes  41,662.00 bytes/sec
 total size is 62,791  speedup is 3.01
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
