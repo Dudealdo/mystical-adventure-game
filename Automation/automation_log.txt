@@ -1,0 +1,4 @@
+2024-11-24 16:50:47 : Starting game build automation...
+Usage: ./scene_creator.sh [scene_name]
+2024-11-24 16:50:47 : Scene generation completed.
+2024-11-24 16:50:47 : Asset generation completed.
