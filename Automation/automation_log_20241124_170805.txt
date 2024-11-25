@@ -1,0 +1,13 @@
+2024-11-24 16:50:47 : Starting game build automation...
+Usage: ./scene_creator.sh [scene_name]
+2024-11-24 16:50:47 : Scene generation completed.
+2024-11-24 16:50:47 : Asset generation completed.
+2024-11-24 16:50:48 : Automation workflow completed.
+2024-11-24 16:57:30 : SCENE_CREATOR is set to: /home/dude/mystical_adventure_game/Automation/scene_creator.sh
+2024-11-24 16:57:30 : Scene 'NewScene_20241124_165730' generation completed.
+2024-11-24 16:58:48 : Starting game build automation...
+2024-11-24 16:58:48 : Scene 'NewScene_20241124_165848' generation completed.
+2024-11-24 16:58:48 : Automation workflow completed.
+2024-11-24 17:00:01 : Starting game build automation...
+2024-11-24 17:00:01 : Scene 'NewScene_20241124_170001' generation completed.
+2024-11-24 17:00:01 : Automation workflow completed.
