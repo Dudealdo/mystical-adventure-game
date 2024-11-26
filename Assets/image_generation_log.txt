@@ -86,3 +86,7 @@ convert-im6.q16: no images defined `/home/dude/mystical_adventure_game/Assets/Ge
 2024年 11月 22日 金曜日 00:00:01 MST : [INFO] Image generation completed.
 2024年 11月 24日 日曜日 16:50:47 MST : [INFO] Starting image generation.
 2024年 11月 24日 日曜日 16:50:47 MST : [INFO] Image generation completed.
+/bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory
+/bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory
+/bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory
+/bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory

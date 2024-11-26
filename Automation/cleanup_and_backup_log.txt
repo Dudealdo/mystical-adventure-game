@@ -11697,3 +11697,10 @@ total size is 117,092,152  speedup is 10.80
 
 sent 10,823,185 bytes  received 14,182 bytes  2,408,303.78 bytes/sec
 total size is 117,092,152  speedup is 10.80
+2024年 11月 26日 火曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 26日 火曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 26日 火曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 26日 火曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 26日 火曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 26日 火曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
+2024年 11月 26日 火曜日 00:00:01 MST : [INFO] Starting cleanup and backup process.
