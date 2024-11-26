@@ -90,3 +90,8 @@ convert-im6.q16: no images defined `/home/dude/mystical_adventure_game/Assets/Ge
 /bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory
 /bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory
 /bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory
+/bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory
+/bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory
+/bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory
+/bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory
+/bin/bash: /home/dude/mystical_adventure_game/Automation/image_builder.sh: No such file or directory
