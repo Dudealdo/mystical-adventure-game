@@ -12,15 +12,15 @@ public class AIManager : MonoBehaviour
     private void Start()
     {
         // Find all AI controllers in the scene and add them to the list
-        aiControllers = new List<AIController>(FindObjectsOfType<AIController>());
+        aiControllers = new List<AIController>(FindObjectsByType<AIController>(FindObjectsSortMode.None));
     }
 
     private void Update()
     {
-        // Update each AI in the list
+        // Update each AI in the list by calling DoAIUpdate() instead of Update()
         foreach (var ai in aiControllers)
         {
-            ai.Update();  // Calls the Update method of each AI
+            ai.DoAIUpdate();  // Calls the public DoAIUpdate() method of each AI
         }
 
         // Optionally, handle bulk behavior logic here (e.g., make all AI switch to idle)
