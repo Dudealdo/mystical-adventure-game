@@ -1,43 +1,35 @@
-using UnityEditor;
 using UnityEngine;
+using UnityEditor;
+using UnityEditor.SceneManagement;  // Make sure this is here to access EditorSceneManager
+using System.IO;  // Make sure this is for File.Exists
 
-public class SceneValidator
+public class SceneValidator : EditorWindow
 {
-    [MenuItem("Tools/Validate Scenes")]
-    public static void ValidateScenes()
+    private string scenePath = "";  // Store the scene path
+    private bool validateOnSave = true;  // Option to validate scene when saved
+
+    [MenuItem("Tools/Validate Scene")]
+    public static void ShowWindow()
     {
-        Debug.Log("Validating Scenes...");
+        // Opens the editor window for scene validation
+        GetWindow<SceneValidator>("Scene Validator");
+    }
 
-        // Iterate through all scenes in the build settings
-        foreach (var scene in EditorBuildSettings.scenes)
+    private void OnGUI()
+    {
+        GUILayout.Label("Scene Validator", EditorStyles.boldLabel);
+
+        // Create a text field for entering or selecting the scene path
+        scenePath = EditorGUILayout.TextField("Scene Path", scenePath);
+
+        if (GUILayout.Button("Validate Scene"))
         {
-            if (!scene.enabled)
-            {
-                Debug.LogWarning($"Scene {scene.path} is disabled in Build Settings and will not be validated.");
-                continue;
-            }
-
-            Debug.Log($"Validating scene: {scene.path}");
-            try
-            {
-                // Open the scene
-                var sceneAsset = AssetDatabase.LoadAssetAtPath<SceneAsset>(scene.path);
-                if (sceneAsset == null)
-                {
-                    Debug.LogError($"Scene {scene.path} could not be loaded.");
-                    continue;
-                }
-
-                // Add additional scene validation logic here if needed
-                Debug.Log($"Scene {scene.path} is valid.");
-            }
-            catch (System.Exception ex)
-            {
-                Debug.LogError($"Error validating scene {scene.path}: {ex.Message}");
-            }
+            ValidateScene();
         }
 
-        Debug.Log("Scene validation completed.");
-    }
-}
+        // Option to automatically validate the scene when it is saved
+        validateOnSave = EditorGUILayout.Toggle("Validate on Save", validateOnSave);
+
+        // Instructions or additional info for the user
+        EditorGUILayout.HelpBox("Va
 

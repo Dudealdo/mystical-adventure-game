@@ -1,26 +1,35 @@
 using UnityEngine;
 using UnityEditor;
+using UnityEditor.SceneManagement;  // Make sure this is here to access EditorSceneManager
+using System.IO;  // Make sure this is for File.Exists
 
 public class SceneValidator : EditorWindow
 {
+    private string scenePath = "";  // Store the scene path
+    private bool validateOnSave = true;  // Option to validate scene when saved
+
     [MenuItem("Tools/Validate Scene")]
-    public static void ValidateScene()
+    public static void ShowWindow()
     {
-        // You can get the current scene path dynamically if needed
-        string scenePath = "Assets/Scenes/NewScene.unity";  // Update with correct scene path
-
-        if (System.IO.File.Exists(scenePath))
-        {
-            // Open the scene for validation (this step is optional for validation)
-            UnityEditor.SceneManagement.EditorSceneManager.OpenScene(scenePath);
-
-            // Validate the scene here, e.g., check for missing references or broken components
-            Debug.Log("Scene validated successfully!");
-        }
-        else
-        {
-            Debug.LogError("Scene not found at " + scenePath);
-        }
+        // Opens the editor window for scene validation
+        GetWindow<SceneValidator>("Scene Validator");
     }
-}
+
+    private void OnGUI()
+    {
+        GUILayout.Label("Scene Validator", EditorStyles.boldLabel);
+
+        // Create a text field for entering or selecting the scene path
+        scenePath = EditorGUILayout.TextField("Scene Path", scenePath);
+
+        if (GUILayout.Button("Validate Scene"))
+        {
+            ValidateScene();
+        }
+
+        // Option to automatically validate the scene when it is saved
+        validateOnSave = EditorGUILayout.Toggle("Validate on Save", validateOnSave);
+
+        // Instructions or additional info for the user
+        EditorGUILayout.HelpBox("Va
 

@@ -1,26 +1,26 @@
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
-public class SceneValidator : EditorWindow
+public class SceneValidator
 {
-    [MenuItem("Tools/Validate Scene")]
-    public static void ValidateScene()
+    [MenuItem("Tools/Validate Scenes")]
+    public static void ValidateScenes()
     {
-        // You can get the current scene path dynamically if needed
-        string scenePath = "Assets/Scenes/NewScene.unity";  // Update with correct scene path
+        Debug.Log("Validating Scenes...");
 
-        if (System.IO.File.Exists(scenePath))
+        // Loop through each scene in the Build Settings
+        foreach (var scene in EditorBuildSettings.scenes)
         {
-            // Open the scene for validation (this step is optional for validation)
-            UnityEditor.SceneManagement.EditorSceneManager.OpenScene(scenePath);
+            // Only validate enabled scenes
+            if (!scene.enabled)
+                continue;
 
-            // Validate the scene here, e.g., check for missing references or broken components
-            Debug.Log("Scene validated successfully!");
+            // Log each scene that is being validated
+            Debug.Log("Validating scene: " + scene.path);
         }
-        else
-        {
-            Debug.LogError("Scene not found at " + scenePath);
-        }
+
+        // Log when validation is complete
+        Debug.Log("Scene validation complete!");
     }
 }
 
