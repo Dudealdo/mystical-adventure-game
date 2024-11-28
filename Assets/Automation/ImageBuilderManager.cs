@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ImageBuilderManager : EditorWindow
 {
-    [MenuItem("Tools/Automation/Run Image Builder")]
+    [MenuItem("Tools/Automation/Run Image Builder Manager")]
     public static void RunImageBuilder()
     {
-        string scriptPath = "Assets/Automation/image_builder.sh"; // Adjust path if necessary
+        string scriptPath = Application.dataPath + "/Automation/image_builder.sh"; // Adjust the path as needed
 
         Process process = new Process();
         process.StartInfo.FileName = "bash";
@@ -17,8 +17,17 @@ public class ImageBuilderManager : EditorWindow
         process.StartInfo.UseShellExecute = false;
         process.StartInfo.CreateNoWindow = true;
 
-        process.OutputDataReceived += (sender, args) => Debug.Log("[ImageBuilder] " + args.Data);
-        process.ErrorDataReceived += (sender, args) => Debug.LogError("[ImageBuilder Error] " + args.Data);
+        process.OutputDataReceived += (sender, args) =>
+        {
+            if (!string.IsNullOrEmpty(args.Data))
+                UnityEngine.Debug.Log("[ImageBuilder] " + args.Data);
+        };
+
+        process.ErrorDataReceived += (sender, args) =>
+        {
+            if (!string.IsNullOrEmpty(args.Data))
+                UnityEngine.Debug.LogError("[ImageBuilder Error] " + args.Data);
+        };
 
         try
         {
@@ -29,16 +38,16 @@ public class ImageBuilderManager : EditorWindow
 
             if (process.ExitCode == 0)
             {
-                Debug.Log("ImageBuilder executed successfully.");
+                UnityEngine.Debug.Log("ImageBuilder executed successfully.");
             }
             else
             {
-                Debug.LogError("ImageBuilder encountered an issue.");
+                UnityEngine.Debug.LogError("ImageBuilder encountered an issue.");
             }
         }
         catch (System.Exception ex)
         {
-            Debug.LogError("Error running ImageBuilder: " + ex.Message);
+            UnityEngine.Debug.LogError("Error running ImageBuilder: " + ex.Message);
         }
     }
 }
