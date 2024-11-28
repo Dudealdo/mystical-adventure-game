@@ -1,34 +1,32 @@
-name: Unity Build Pipeline
+name: Build Unity Project
 
 on:
   push:
     branches:
       - main
-  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout Repository
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Install Unity Environment
-      - name: Set up Unity
+      - name: Set up Unity License
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        run: |
+          echo "$UNITY_LICENSE" > unity.ulf
+          mkdir -p ~/.local/share/unity3d/Unity/
+          mv unity.ulf ~/.local/share/unity3d/Unity/Unity_lic.ulf
+
+      - name: Run Unity Build
         uses: game-ci/unity-builder@v2
         with:
-          unityVersion: 2022.3.53f1 # Match your Unity version
-          androidVersionCode: 74
-          license: ${{ secrets.UNITY_LICENSE }}
-          targetPlatform: StandaloneWindows64 # Update for your platform
+          unityVersion: "2022.3.53f1"
+          targetPlatform: "StandaloneWindows64"
 
-      # Step 3: Run Unity Build
-      - name: Build Project
-        run: |
-          chmod +x Automation/Scripts/build.sh
-          ./Automation/Scripts/build.sh
 
       # Step 4: Upload Build Artifacts
       - name: Upload Build Artifacts
