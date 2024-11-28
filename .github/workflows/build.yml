@@ -1,0 +1,43 @@
+name: Unity Build Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout Repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Install Unity Environment
+      - name: Install Unity
+        uses: game-ci/unity-builder@v2
+        with:
+          unityVersion: 2022.3.53f1 # Match your Unity version
+          targetPlatform: StandaloneWindows64 # Update for your platform
+
+      # Step 3: Run Unity Build
+      - name: Build Project
+        run: |
+          chmod +x Automation/Scripts/build.sh
+          ./Automation/Scripts/build.sh
+
+      # Step 4: Upload Build Artifacts
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: GameBuild
+          path: Builds/
+
+      # Step 5: Save Logs
+      - name: Upload Build Logs
+        uses: actions/upload-artifact@v3
+        with:
+          name: BuildLogs
+          path: BuildLogs/
