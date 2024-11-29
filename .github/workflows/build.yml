@@ -17,9 +17,8 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         run: |
-          echo "$UNITY_LICENSE" > unity.ulf
           mkdir -p ~/.local/share/unity3d/Unity/
-          mv unity.ulf ~/.local/share/unity3d/Unity/Unity_lic.ulf
+          echo "$UNITY_LICENSE" > ~/.local/share/unity3d/Unity/Unity_lic.ulf
 
       - name: Run Unity Build
         uses: game-ci/unity-builder@v2
@@ -30,11 +29,5 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: GameBuild
-          path: Builds/
-
-      - name: Upload Build Logs
-        uses: actions/upload-artifact@v3
-        with:
-          name: BuildLogs
-          path: BuildLogs/
+          name: "GameBuild"
+          path: "Builds"
