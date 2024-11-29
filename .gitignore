@@ -77,3 +77,6 @@ Automation/Logs/
 # Ignore Backup and Cache
 Automation/package_cache_log.txt
 Automation/cleanup_and_backup_log.txt
+*.ulf
+secrets/
+
