@@ -64,7 +64,7 @@ jobs:
 
       - name: Prepare Build Artifacts Directory
         run: mkdir -p Builds/
-             - name: Validate Decoded License
+      - name: Validate Decoded License
         run: |
           cat ~/.local/share/unity3d/Unity/Unity_lic.ulf
           echo "License decoded and saved successfully."
