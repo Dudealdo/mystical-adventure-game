@@ -1,68 +1,42 @@
-name: Validate Unity License and Prepare Build
+name: Build Unity Project
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
-  validate-license:
-    name: Validate Unity License
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Deploy Unity License
-      - name: Deploy Unity License
+      - name: Set up Unity License
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         run: |
-          LICENSE_PATH=~/.local/share/unity3d/Unity/Unity_lic.ulf
-          mkdir -p $(dirname "$LICENSE_PATH")
-          echo "$UNITY_LICENSE" > "$LICENSE_PATH"
-          echo "Unity license deployed to $LICENSE_PATH"
+          mkdir -p ~/.local/share/unity3d/Unity/
+          echo "$UNITY_LICENSE" | tr -d '\n' | base64 --decode > ~/.local/share/unity3d/Unity/Unity_lic.ulf
 
-      # Step 3: Validate Unity License
-      - name: Validate Unity License
+      - name: Validate License File
         run: |
-          if unity-editor --version; then
-            echo "Unity license validated successfully."
+          if [ -f ~/.local/share/unity3d/Unity/Unity_lic.ulf ]; then
+            echo "License file successfully created."
           else
-            echo "Error: Unity license validation failed."
+            echo "License file creation failed!"
             exit 1
           fi
 
-      # Step 4: Log Unity Environment Details
-      - name: Log Unity Configuration
-        run: |
-          mkdir -p UnityLogs
-          unity-editor --version > UnityLogs/UnityVersion.log
-          echo "Unity version logged successfully."
+      - name: Run Unity Build
+        uses: game-ci/unity-builder@v2
+        with:
+          unityVersion: "2022.3.53f1"
+          targetPlatform: "StandaloneWindows64"
 
-      # Step 5: Upload Validation Logs
-      - name: Upload Validation Logs
+      - name: Upload Build Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: ValidationLogs
-          path: UnityLogs/
-
-  prepare-build:
-    name: Prepare Build
-    needs: validate-license
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install Unity Dependencies
-        run: sudo apt-get install -y libglib2.0-0 libnss3-dev libx11-xcb-dev libasound2 libxcomposite-dev libxrandr-dev libatk1.0-dev libxcursor-dev libxinerama-dev
-
-      - name: Prepare Build Artifacts Directory
-        run: mkdir -p Builds/
-
+          name: "GameBuild"
           path: "Builds"
