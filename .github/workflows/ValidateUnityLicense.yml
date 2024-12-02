@@ -1,32 +1,30 @@
-name: Validate Unity License and Prepare Build
+name: Validate Unity License
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   validate-license:
-    name: Validate Unity License
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Deploy Unity License
-      - name: Deploy Unity License
+      - name: Set up Unity License
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         run: |
-          LICENSE_PATH=~/.local/share/unity3d/Unity/Unity_lic.ulf
-          mkdir -p $(dirname "$LICENSE_PATH")
-          echo "$UNITY_LICENSE" > "$LICENSE_PATH"
-          echo "Unity license deployed to $LICENSE_PATH"
+          mkdir -p ~/.local/share/unity3d/Unity/
+          echo "$UNITY_LICENSE" | tr -d '\n' | base64 --decode > ~/.local/share/unity3d/Unity/Unity_lic.ulf
 
-      # Step 3: Validate Unity License
+      - name: Install Unity
+        uses: game-ci/unity-installer@v3
+        with:
+          unityVersion: "2022.3.53f1"
+
       - name: Validate Unity License
         run: |
           if unity-editor --version; then
@@ -35,37 +33,3 @@ jobs:
             echo "Error: Unity license validation failed."
             exit 1
           fi
-
-      # Step 4: Log Unity Environment Details
-      - name: Log Unity Configuration
-        run: |
-          mkdir -p UnityLogs
-          unity-editor --version > UnityLogs/UnityVersion.log
-          echo "Unity version logged successfully."
-
-      # Step 5: Upload Validation Logs
-      - name: Upload Validation Logs
-        uses: actions/upload-artifact@v3
-        with:
-          name: ValidationLogs
-          path: UnityLogs/
-
-  prepare-build:
-    name: Prepare Build
-    needs: validate-license
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install Unity Dependencies
-        run: sudo apt-get install -y libglib2.0-0 libnss3-dev libx11-xcb-dev libasound2 libxcomposite-dev libxrandr-dev libatk1.0-dev libxcursor-dev libxinerama-dev
-
-      - name: Prepare Build Artifacts Directory
-        run: mkdir -p Builds/
-      - name: Validate Decoded License
-        run: |
-          cat ~/.local/share/unity3d/Unity/Unity_lic.ulf
-          echo "License decoded and saved successfully."
-
