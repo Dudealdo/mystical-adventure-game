@@ -15,10 +15,11 @@ jobs:
 
       - name: Set up Unity License
         env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+         UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         run: |
-          mkdir -p ~/.local/share/unity3d/Unity/
-          echo "$UNITY_LICENSE" | base64 -d > ~/.local/share/unity3d/Unity/Unity_lic.ulf
+         mkdir -p ~/.local/share/unity3d/Unity/
+         echo "$UNITY_LICENSE" | tr -d '\n' | base64 --decode > ~/.local/share/unity3d/Unity/Unity_lic.ulf
+
 
       - name: Run Unity Build
         uses: game-ci/unity-builder@v2
@@ -31,3 +32,12 @@ jobs:
         with:
           name: "GameBuild"
           path: "Builds"
+      - name: Validate License File
+        run: |
+         if [ -f ~/.local/share/unity3d/Unity/Unity_lic.ulf ]; then
+          echo "License file created successfully."
+         cat ~/.local/share/unity3d/Unity/Unity_lic.ulf
+         else
+         echo "License file creation failed!"
+         exit 1
+         fi
