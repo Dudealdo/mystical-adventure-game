@@ -1,0 +1,51 @@
+name: Validate Unity License
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-license:
+    name: Validate Unity License File
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Verify Unity License File Placement
+      - name: Check License File
+        run: |
+          LICENSE_PATH=~/.local/share/unity3d/Unity/Unity_lic.ulf
+          if [ ! -f "$LICENSE_PATH" ]; then
+            echo "Error: Unity license file not found at $LICENSE_PATH"
+            exit 1
+          fi
+          echo "Unity license file found at $LICENSE_PATH"
+
+      # Step 3: Test Unity License Activation
+      - name: Test Unity License Activation
+        run: |
+          unity-editor --version || {
+            echo "Error: Unity Editor cannot recognize the license. Check the file content and path."
+            exit 1
+          }
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+
+      # Step 4: Log Unity Editor Configuration
+      - name: Log Unity Configuration
+        run: |
+          mkdir -p UnityLogs
+          unity-editor --version > UnityLogs/UnityVersion.log
+          echo "Unity configuration details logged successfully."
+      
+      # Step 5: Upload Logs for Debugging
+      - name: Upload Logs
+        uses: actions/upload-artifact@v3
+        with:
+          name: UnityLogs
+          path: UnityLogs/
