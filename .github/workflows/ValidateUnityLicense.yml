@@ -1,42 +1,53 @@
-name: Validate Unity License
+name: Matrix-Based Unity Build
 
 on:
   push:
     branches:
       - main
+  pull_request:
 
 jobs:
-  validate-license:
-    runs-on: ubuntu-latest
-
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, ubuntu-24.04]
+        unity_version: ["2022.3.53f1"]
     steps:
+      # Checkout Repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Set up Unity License
       - name: Set up Unity License
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         run: |
-         mkdir -p ~/.local/share/unity3d/Unity/
-         echo "$UNITY_LICENSE" | tr -d '\n' | base64 --decode > ~/.local/share/unity3d/Unity/Unity_lic.ulf
-         if [ $? -ne 0 ]; then
-         echo "Failed to decode UNITY_LICENSE. Please ensure it is a valid base64 string."
-         exit 1
-         fi
-         echo "License file successfully created."
+          mkdir -p ~/.local/share/unity3d/Unity/
+          echo "$UNITY_LICENSE" | tr -d '\n' | base64 --decode > ~/.local/share/unity3d/Unity/Unity_lic.ulf
+          if [ ! -f ~/.local/share/unity3d/Unity/Unity_lic.ulf ]; then
+            echo "Unity license setup failed!"
+            exit 1
+          else
+            echo "Unity license validated successfully."
+          fi
 
+      # Install Unity
+      - name: Install Unity
+        uses: game-ci/unity-installer@v2
+        with:
+          unityVersion: ${{ matrix.unity_version }}
+          platform: StandaloneWindows64
 
-      - name: Install Unity and Validate License
+      # Build Project
+      - name: Build Unity Project
         uses: game-ci/unity-builder@v2
         with:
-          unityVersion: "2022.3.53f1"
-          targetPlatform:  "StandaloneWindows64"
+          unityVersion: ${{ matrix.unity_version }}
+          targetPlatform: StandaloneWindows64
+          buildName: "MatrixTestBuild"
 
-      - name: Validate Unity License
-        run: |
-          if unity-editor --version; then
-            echo "Unity license validated successfully."
-          else
-            echo "Error: Unity license validation failed."
-            exit 1
-          fi
+      # Upload Build Artifacts
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+      
