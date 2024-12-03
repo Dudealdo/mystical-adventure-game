@@ -1,0 +1,21 @@
+name: Build Unity Project Locally
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Unity Builder
+        uses: ./unity-builder  # Path to the local unity-builder directory
+        with:
+          unityVersion: "2022.3.53f1"
+          targetPlatform: "StandaloneWindows64"
+
