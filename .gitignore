@@ -80,3 +80,4 @@ Automation/cleanup_and_backup_log.txt
 *.ulf
 secrets/
 
+unity-builder
