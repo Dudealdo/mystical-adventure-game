@@ -1,4 +1,4 @@
-using System.Diagnostics; // Required for Process
+using System.Diagnostics; // For Process
 using UnityEditor;
 using UnityEngine;
 
@@ -22,11 +22,11 @@ public class LoadHandlerManager : EditorWindow
         {
             StartInfo = new ProcessStartInfo
             {
-                FileName = "bash", // Shell to execute script
-                Arguments = AbsoluteScriptPath, // Pass the script path as an argument
+                FileName = "/bin/bash", // Use absolute path to 'bash' for better compatibility
+                Arguments = $"\"{AbsoluteScriptPath}\"", // Safely pass the script path as an argument
                 RedirectStandardOutput = true, // Capture standard output
                 RedirectStandardError = true, // Capture error output
-                UseShellExecute = false, // Ensure compatibility with cross-platform processes
+                UseShellExecute = false, // Required for redirection
                 CreateNoWindow = true // Hide shell window during execution
             }
         };
@@ -53,7 +53,8 @@ public class LoadHandlerManager : EditorWindow
             process.BeginOutputReadLine(); // Begin reading output
             process.BeginErrorReadLine(); // Begin reading errors
 
-            if (!process.WaitForExit(60000)) // Wait for up to 60 seconds
+            bool exited = process.WaitForExit(60000); // Wait for up to 60 seconds
+            if (!exited)
             {
                 UnityEngine.Debug.LogError("[LoadHandler Error] Process timed out.");
                 process.Kill(); // Force stop
